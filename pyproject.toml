@@ -1,0 +1,24 @@
+[project]
+name = "suggarfree"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Joás",email = "cabraljrjoas@tutanota.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11, <4.0"
+dependencies = [
+    "textual (>=3.2.0,<4.0.0)",
+]
+
+[tool.poetry]
+packages = [{include = "suggarfree", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+textual-dev = "^1.7.0"
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0, <3.0.0"]
+build-backend = "poetry.core.masonry.api"

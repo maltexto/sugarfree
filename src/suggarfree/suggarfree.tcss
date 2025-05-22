@@ -1,0 +1,29 @@
+#main-sidebar {
+    width: 30;
+    height: 100%;
+    dock: left;
+    border-right: solid pink;
+}
+
+#main-sidebar-title {
+    color: white;
+    padding: 1;
+    content-align: left top;
+}
+
+#main-header {
+    dock: top;
+    height: 2;
+    width: 100%;
+    margin-left: 30;
+    border: solid red;
+}
+
+#main-footer {
+    dock: bottom;
+    height: 2;
+    width: 100%;
+    margin-left: 30;
+    border: solid white;
+}
+
