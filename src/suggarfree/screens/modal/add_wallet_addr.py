@@ -4,7 +4,7 @@ from textual.screen import ModalScreen
 from textual.widgets import Label, Input, Button
 
 
-class AddAddrWallet(ModalScreen[str]):
+class AddWalletHash(ModalScreen[str | None]):
 
     # CSS específico para este modal - Textual permite CSS inline
     CSS = """
@@ -38,17 +38,19 @@ class AddAddrWallet(ModalScreen[str]):
 
         with Vertical(id="modal-add-wallet-addr-container"):
             yield Input(placeholder="Enter wallet hash...", id="input-add-wallet-addr")
-            # TODO: add command: enter -> add item
-            # TODO: add command: esc -> cancel
-
 
     def on_mount(self) -> None:
         self.query_one("#input-add-wallet-addr", Input).focus()
 
-    def on_button_pressed(self, event: Button.Pressed) -> None:
-
-        ...
-
     def on_input_submitted(self, event: Input.Submitted) -> None:
 
-       ...
+        wallet_addr = event.value.strip()  # event.value contém o texto do input
+
+        if wallet_addr:
+            self.dismiss(wallet_addr)
+        else:
+            # TODO: animação tremor input vermelho e esperar o input
+            self.dismiss(None)
+
+    def key_escape(self) -> None:
+        self.dismiss(None)
