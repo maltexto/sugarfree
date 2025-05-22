@@ -5,7 +5,7 @@
     border-right: solid pink;
 }
 
-#main-sidebar-title {
+#main-sidebar #sidebar-title {
     color: white;
     padding: 1;
     content-align: left top;

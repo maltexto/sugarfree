@@ -3,6 +3,7 @@ from textual.screen import Screen
 
 from widgets import Sidebar, Header, Footer
 
+
 class MainScreen(Screen):
 
     def compose(self) -> ComposeResult:

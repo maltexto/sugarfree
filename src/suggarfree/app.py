@@ -2,6 +2,7 @@ from textual.app import App
 
 from screens import MainScreen
 
+
 class Sugarfree(App):
 
     CSS_PATH = "suggarfree.tcss"
@@ -14,6 +15,7 @@ class Sugarfree(App):
 
     def on_mount(self) -> None:
         self.push_screen("main_screen")
+
 
 if __name__ == "__main__":
     app = Sugarfree()

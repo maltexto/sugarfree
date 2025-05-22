@@ -6,4 +6,4 @@ from textual.widgets import Static
 class Sidebar(Vertical):
 
     def compose(self) -> ComposeResult:
-        yield Static("Wallets", id="main-sidebar-title")
+        yield Static("Wallets", id="sidebar-title")
